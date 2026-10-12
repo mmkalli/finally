@@ -23,7 +23,7 @@ Use code like these examples in order to use Cerebras.
 
 ```python
 from litellm import completion
-MODEL = "openrouter/openai/gpt-oss-120b"
+MODEL = "nvidia/nemotron-3-ultra-550b-a55b:free"
 EXTRA_BODY = {"provider": {"order": ["cerebras"]}}
 ```
 
