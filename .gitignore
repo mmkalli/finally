@@ -219,3 +219,14 @@ next-env.d.ts
 # Playwright
 test/playwright-report/
 test/test-results/
+
+# GSD (get-shit-done) local install — not part of the project
+.claude/.gsd-profile
+.claude/agents/gsd-*.md
+.claude/commands/gsd/
+.claude/get-shit-done/
+.claude/gsd-file-manifest.json
+.claude/gsd-install-state.json
+.claude/gsd-migration-journal/
+.claude/hooks/
+.claude/package.json
