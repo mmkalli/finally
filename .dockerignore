@@ -1,0 +1,49 @@
+# VCS / editor / agent files
+.git
+.github
+.gitignore
+.claude
+.claude-plugin
+.vscode
+.idea
+**/desktop.ini
+**/.DS_Store
+
+# Secrets: passed at runtime via --env-file, never baked into the image
+.env
+.env.*
+!.env.example
+
+# Frontend build artifacts and dependencies (rebuilt in the image)
+frontend/node_modules
+frontend/.next
+frontend/out
+frontend/coverage
+**/npm-debug.log*
+
+# Python artifacts
+backend/.venv
+backend/static
+**/__pycache__
+**/*.py[cod]
+**/.pytest_cache
+**/.ruff_cache
+**/.mypy_cache
+**/.coverage
+**/htmlcov
+
+# Local database files
+db
+**/*.db
+**/*.db-journal
+**/*.db-wal
+**/*.db-shm
+
+# Not needed in the image
+planning
+test
+scripts
+independent-reviewer
+backend/tests
+*.md
+!backend/**/*.md

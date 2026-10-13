@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-=======
-# backend/app/market/cache.py
->>>>>>> 15bd778770aae61628b6b76861fd1f59cb38fd06
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 from .models import PriceUpdate
 
@@ -39,12 +35,18 @@ class PriceCache:
         price = round(price, 2)
         if open_price is None:
             open_price = prev.open_price if prev else price
+        if timestamp is None:
+            timestamp = datetime.now(timezone.utc)
+            if prev and timestamp <= prev.timestamp:
+                # Windows' clock can return the same instant twice; keep own timestamps strictly
+                # increasing so the SSE stream (which diffs timestamps) sees every update.
+                timestamp = prev.timestamp + timedelta(microseconds=1)
         update = PriceUpdate(
             ticker=ticker,
             price=price,
             previous_price=prev.price if prev else price,
             open_price=round(open_price, 2),
-            timestamp=timestamp or datetime.now(timezone.utc),
+            timestamp=timestamp,
         )
         self._prices[ticker] = update
         self._version += 1

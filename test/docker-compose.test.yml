@@ -1,0 +1,50 @@
+# E2E test stack: the production app image (mock LLM, simulator, throwaway DB) + a Playwright runner.
+#
+#   docker compose -f test/docker-compose.test.yml up --build --exit-code-from playwright
+#   docker compose -f test/docker-compose.test.yml down -v
+#
+# HTML report and traces land in test/playwright-report and test/test-results.
+name: finally-e2e
+
+services:
+  # Not named "app": Chromium HSTS-preloads the .app TLD and upgrades http://app to https.
+  finally:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: finally:e2e
+    environment:
+      LLM_MOCK: "true"
+      OPENROUTER_API_KEY: ""
+      MASSIVE_API_KEY: ""
+    volumes:
+      - e2e-db:/app/db
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/api/health', timeout=3).status == 200 else 1)"
+      interval: 2s
+      timeout: 5s
+      retries: 30
+      start_period: 5s
+
+  playwright:
+    # Must match the @playwright/test version pinned in test/package.json.
+    image: mcr.microsoft.com/playwright:v1.64.0-noble
+    depends_on:
+      finally:
+        condition: service_healthy
+    working_dir: /e2e
+    environment:
+      BASE_URL: http://finally:8000
+    volumes:
+      - ./:/e2e
+      # Keep the container's node_modules separate from any host install.
+      - /e2e/node_modules
+    ipc: host
+    command: ["sh", "-c", "npm ci --no-audit --no-fund && npx playwright test"]
+
+volumes:
+  e2e-db:

@@ -48,7 +48,7 @@ async def price_events(cache: PriceCache, request: Request) -> AsyncIterator[str
 @stream_router.get("/api/stream/prices")
 async def stream_prices(request: Request) -> StreamingResponse:
     return StreamingResponse(
-        price_events(request.app.state.price_cache, request),
+        price_events(request.app.state.cache, request),
         media_type="text/event-stream",
         headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no", "Connection": "keep-alive"},
     )

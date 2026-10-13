@@ -14,8 +14,8 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
+/lib/
+/lib64/
 parts/
 sdist/
 var/
@@ -208,3 +208,34 @@ __marimo__/
 
 # Windows
 desktop.ini
+
+# ---------- FinAlly ----------
+# Keep the example env file tracked
+!.env.example
+
+# SQLite database (local dev writes to db/finally.db)
+db/*.db
+db/*.db-journal
+db/*.db-wal
+db/*.db-shm
+!db/.gitkeep
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/next-env.d.ts
+frontend/*.tsbuildinfo
+frontend/coverage/
+
+# Backend: static export copied in for local serving
+backend/static/
+
+# E2E artifacts
+test/node_modules/
+test/test-results/
+test/playwright-report/
+test/blob-report/
+
+# OS
+.DS_Store

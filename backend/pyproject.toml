@@ -5,12 +5,10 @@ requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.115",
     "uvicorn[standard]>=0.30",
-<<<<<<< HEAD
     "httpx>=0.27",          # Massive client (async). Listed explicitly even though LiteLLM also pulls it in.
     "tzdata>=2024.1",       # zoneinfo data for America/New_York; Windows has no system tz database
-=======
-    "httpx>=0.27",
->>>>>>> 15bd778770aae61628b6b76861fd1f59cb38fd06
+    "python-dotenv>=1.2.4",
+    "litellm>=1.105.0",
 ]
 
 [dependency-groups]
@@ -19,18 +17,8 @@ dev = ["pytest>=8", "pytest-asyncio>=0.24"]
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 asyncio_default_fixture_loop_scope = "function"
-<<<<<<< HEAD
-
-[tool.uv]
-package = false
-=======
 testpaths = ["tests"]
 pythonpath = ["."]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.hatch.build.targets.wheel]
-packages = ["app"]
->>>>>>> 15bd778770aae61628b6b76861fd1f59cb38fd06
+[tool.uv]
+package = false

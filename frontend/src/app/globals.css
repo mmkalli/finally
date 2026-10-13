@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* Terminal palette. Brand colours from PLAN.md §2; up/down are the market colours. */
+@theme {
+  --color-bg: #0d1117;
+  --color-panel: #121821;
+  --color-raised: #19212c;
+  --color-line: #242e3b;
+  --color-line-strong: #33404f;
+  --color-ink: #dce3eb;
+  --color-muted: #7f8c9d;
+  --color-faint: #536071;
+  --color-accent: #ecad0a;
+  --color-primary: #209dd7;
+  --color-submit: #753991;
+  --color-up: #2fbf71;
+  --color-down: #ef5350;
+
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Price flash: the class snaps the background on; removing it fades back over 500ms. */
+.flash-cell {
+  transition: background-color 500ms ease-out;
+}
+.flash-cell.flash-up {
+  background-color: rgb(47 191 113 / 0.28);
+  transition: none;
+}
+.flash-cell.flash-down {
+  background-color: rgb(239 83 80 / 0.28);
+  transition: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+/* Thin scrollbars that sit inside the panels. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.thinking span {
+  animation: pulse-dot 1.2s infinite ease-in-out;
+}
+.thinking span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.thinking span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flash-cell,
+  .flash-cell.flash-up,
+  .flash-cell.flash-down {
+    transition: none;
+  }
+  .thinking span {
+    animation: none;
+    opacity: 0.7;
+  }
+}
+
+/* Recharts focus outline on SVG wrappers is noise in a dense terminal. */
+.recharts-wrapper:focus,
+.recharts-surface:focus {
+  outline: none;
+}

@@ -368,7 +368,7 @@ Every error response uses one shape:
 {"snapshots": [{"total_value": 10000.00, "recorded_at": "…"}]}
 ```
 
-`POST /api/reset` clears positions, trades, snapshots and chat messages, restores cash to $10,000 and restores the default watchlist. It returns the fresh `GET /api/portfolio` shape. It is used for demos and to isolate E2E tests.
+`POST /api/reset` clears positions, trades, snapshots and chat messages, restores cash to $10,000 and restores the default watchlist, then records one $10,000.00 snapshot so the P&L chart is never empty. It returns the fresh `GET /api/portfolio` shape. It is used for demos and to isolate E2E tests.
 
 ### Watchlist
 | Method | Path | Description |
