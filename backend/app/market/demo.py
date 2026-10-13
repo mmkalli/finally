@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """Watch live prices in the terminal:  cd backend && uv run python -m app.market.demo [seconds]
 
 Simulator by default; set MASSIVE_API_KEY to watch real prices instead. Ctrl+C to stop.
@@ -8,17 +7,10 @@ import logging
 import os
 import sys
 from collections import defaultdict, deque
-=======
-# backend/app/market/demo.py
-"""Watch live prices in the terminal:  cd backend && uv run python -m app.market.demo"""
-import asyncio
-import logging
->>>>>>> 15bd778770aae61628b6b76861fd1f59cb38fd06
 
 from . import PriceCache, create_market_data_source
 from .seed_data import DEFAULT_TICKERS
 
-<<<<<<< HEAD
 SPARK = "▁▂▃▄▅▆▇█"
 HISTORY = 40
 GREEN, RED, DIM, BOLD, RESET = "\033[32m", "\033[31m", "\033[2m", "\033[1m", "\033[0m"
@@ -69,31 +61,12 @@ async def main(seconds: float | None = None) -> None:
             sys.stdout.write("\n".join(f"{line}\033[K" for line in lines) + "\n")
             sys.stdout.flush()
             drawn = len(lines)
-=======
-
-async def main(seconds: float = 10.0) -> None:
-    logging.basicConfig(level=logging.INFO)
-    cache = PriceCache()
-    source = create_market_data_source(cache)  # simulator unless MASSIVE_API_KEY is set
-    await source.start(DEFAULT_TICKERS)
-    try:
-        for _ in range(int(seconds * 2)):
-            await asyncio.sleep(0.5)
-            print("  ".join(
-                f"{u.ticker:<5}{u.price:>8.2f} {u.change_percent:+5.2f}%{'▲' if u.direction == 'up' else '▼' if u.direction == 'down' else ' '}"
-                for u in list(cache.snapshot().values())[:5]
-            ))
->>>>>>> 15bd778770aae61628b6b76861fd1f59cb38fd06
     finally:
         await source.stop()
 
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     try:
         asyncio.run(main(float(sys.argv[1]) if len(sys.argv) > 1 else None))
     except KeyboardInterrupt:
         pass
-=======
-    asyncio.run(main())
->>>>>>> 15bd778770aae61628b6b76861fd1f59cb38fd06

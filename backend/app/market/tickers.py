@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-# backend/app/market/tickers.py
->>>>>>> 15bd778770aae61628b6b76861fd1f59cb38fd06
 import re
 
 TICKER_RE = re.compile(r"^[A-Z.]{1,6}$")

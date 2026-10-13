@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-# backend/app/market/seed_data.py
->>>>>>> 15bd778770aae61628b6b76861fd1f59cb38fd06
 from __future__ import annotations
 
 import random
