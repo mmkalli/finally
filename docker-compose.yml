@@ -1,0 +1,21 @@
+# Optional convenience wrapper around the same image the start scripts run.
+#   docker compose up --build -d     # http://localhost:8000
+#   docker compose down              # keeps the finally-data volume
+services:
+  finally:
+    build: .
+    image: finally
+    container_name: finally
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - finally-data:/app/db
+    restart: unless-stopped
+
+volumes:
+  finally-data:
+    # Same volume as scripts/start_*, so both share one database
+    name: finally-data
