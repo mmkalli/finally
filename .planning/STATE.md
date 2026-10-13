@@ -4,13 +4,13 @@ milestone: v1.0
 milestone_name: milestone
 status: executing
 stopped_at: Roadmap created
-last_updated: "2026-10-13T12:05:46.204Z"
-last_activity: 2026-10-13 -- Phase 1 planning complete
+last_updated: "2026-10-13T12:09:26.151Z"
+last_activity: 2026-10-13
 progress:
   total_phases: 7
   completed_phases: 0
   total_plans: 4
-  completed_plans: 0
+  completed_plans: 1
   percent: 0
 ---
 
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-10-13)
 
 **Core value:** One command launches a container where prices visibly stream, trades execute instantly, and the AI chat can place a trade that shows up inline.
-**Current focus:** Phase 1 - Repair & Baseline
+**Current focus:** Phase 01 — repair-baseline
 
 ## Current Position
 
-Phase: 1 of 7 (Repair & Baseline)
-Plan: 0 of TBD in current phase
+Phase: 01 (repair-baseline) — EXECUTING
+Plan: 2 of 4
 Status: Ready to execute
-Last activity: 2026-10-13 -- Phase 1 planning complete
+Last activity: 2026-10-13
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [███░░░░░░░] 25%
 
 ## Performance Metrics
 
@@ -47,6 +47,7 @@ Progress: [░░░░░░░░░░] 0%
 | - | - | - | - |
 
 *Updated after each plan completion*
+| Phase 01 P01 | 10min | 2 tasks | 10 files |
 
 ## Accumulated Context
 
@@ -59,6 +60,7 @@ Recent decisions affecting current work:
 - [Roadmap]: Approved additions: GET /api/chat (API-08, UI-17), POLISH-01..04
 - [Roadmap]: Frontend split in two phases; Phase 5 needs Phase 3 (chat) and Phase 4
 - [Roadmap]: Done = E2E green in Docker with LLM_MOCK=true; PowerShell scripts must work
+- [Phase 01-01]: PriceCache auto timestamps strictly increasing per ticker (Windows clock resolution)
 
 ### Pending Todos
 
@@ -79,6 +81,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-10-13
+Last session: 2026-10-13T12:09:21.041Z
 Stopped at: Roadmap created
 Resume file: None
