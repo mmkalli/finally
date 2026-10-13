@@ -53,7 +53,15 @@ test/       Playwright E2E tests
 ## Testing
 
 - Backend: `cd backend && uv run pytest`
-- E2E: `docker compose -f test/docker-compose.test.yml up`, which runs with `LLM_MOCK=true`
+- Frontend: `cd frontend && npm test`
+- E2E (Playwright, against the real container with `LLM_MOCK=true`):
+
+  ```bash
+  docker compose -f test/docker-compose.test.yml up --build --abort-on-container-exit --exit-code-from playwright
+  docker compose -f test/docker-compose.test.yml down -v
+  ```
+
+  The HTML report is written to `test/playwright-report/`.
 
 ## License
 
