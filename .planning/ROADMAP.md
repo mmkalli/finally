@@ -35,7 +35,7 @@ Plans:
 **Wave 1**
 
 - [x] 01-01-PLAN.md — Resolve merge conflicts in the 9 market modules, commit factory.py, market suite green (wave 1)
-- [ ] 01-02-PLAN.md — Delete stale pycache dirs; add .gitattributes, .dockerignore, .env.example (wave 1)
+- [x] 01-02-PLAN.md — Delete stale pycache dirs; add .gitattributes, .dockerignore, .env.example (wave 1)
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
@@ -142,7 +142,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Repair & Baseline | 1/4 | In Progress|  |
+| 1. Repair & Baseline | 2/4 | In Progress|  |
 | 2. Backend Core | 0/TBD | Not started | - |
 | 3. LLM Chat | 0/TBD | Not started | - |
 | 4. Frontend Market | 0/TBD | Not started | - |

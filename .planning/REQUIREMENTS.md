@@ -13,8 +13,8 @@
 - [ ] **FOUND-02**: Backend dependencies (litellm, pydantic, python-dotenv, tzdata) are declared via uv and `uv.lock` is regenerated; `uv sync` succeeds
 - [x] **FOUND-03**: The existing market-data test suite passes (`uv run pytest`)
 - [ ] **FOUND-04**: A guard test/CI check fails if any `^<<<<<<<` / `^>>>>>>>` conflict marker exists in the repo
-- [ ] **FOUND-05**: Stale `__pycache__` dirs for `api/`, `chat/`, `database/`, `portfolio/` are removed
-- [ ] **FOUND-06**: `.gitattributes` (LF for `.sh`, Dockerfile, `.yml`), `.dockerignore`, and `.env.example` exist
+- [x] **FOUND-05**: Stale `__pycache__` dirs for `api/`, `chat/`, `database/`, `portfolio/` are removed
+- [x] **FOUND-06**: `.gitattributes` (LF for `.sh`, Dockerfile, `.yml`), `.dockerignore`, and `.env.example` exist
 
 ### App Shell
 
@@ -162,8 +162,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOUND-02 | Phase 1 | Pending |
 | FOUND-03 | Phase 1 | Complete |
 | FOUND-04 | Phase 1 | Pending |
-| FOUND-05 | Phase 1 | Pending |
-| FOUND-06 | Phase 1 | Pending |
+| FOUND-05 | Phase 1 | Complete |
+| FOUND-06 | Phase 1 | Complete |
 | SHELL-01 | Phase 2 | Pending |
 | SHELL-02 | Phase 2 | Pending |
 | SHELL-03 | Phase 2 | Pending |
