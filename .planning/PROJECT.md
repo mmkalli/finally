@@ -77,6 +77,8 @@ Note: these capabilities exist in source but are currently **broken**: commit `b
 | Done = E2E green in Docker with LLM_MOCK | Objective, reproducible bar for completion | — Pending |
 | PLAN.md is locked | Shared contract across agents; avoid drift | — Pending |
 | Fix merge conflicts first | Everything downstream depends on importable market code | — Pending |
+| LLM: keep PLAN.md §9 model on OpenRouter's Nvidia free endpoint | Cerebras doesn't serve it (checked live 2026-10-13); follow PLAN.md rather than switch models; tolerant JSON parsing covers missing schema enforcement | — Pending |
+| Add GET /api/chat + 4 demo-polish items | User-approved additions: chat restore on reload, reset button, prompt chips, action reveal, tooltips/$10k line | — Pending |
 
 ## Evolution
 
