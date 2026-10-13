@@ -1,0 +1,8 @@
+# LF is required for files executed or parsed inside the Linux container;
+# CRLF breaks shebangs and YAML/Dockerfile parsing.
+*.sh text eol=lf
+Dockerfile text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+# PowerShell scripts run on Windows.
+*.ps1 text eol=crlf

@@ -1,0 +1,29 @@
+# VCS and tooling
+.git
+.github
+.claude
+.claude-plugin
+.planning
+planning
+independent-reviewer
+
+# Python artifacts
+**/__pycache__
+**/*.pyc
+**/.venv
+.pytest_cache
+**/.pytest_cache
+
+# Node artifacts
+**/node_modules
+frontend/.next
+frontend/out
+
+# Secrets (keep the example)
+.env
+.env.*
+!.env.example
+
+# Local data and tests
+db/*.db
+test/
