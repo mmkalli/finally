@@ -4,7 +4,7 @@ milestone: v1.0
 milestone_name: milestone
 status: executing
 stopped_at: Roadmap created
-last_updated: "2026-10-13T12:18:50.305Z"
+last_updated: "2026-10-13T12:18:55.924Z"
 last_activity: 2026-10-13
 progress:
   total_phases: 7
@@ -48,6 +48,7 @@ Progress: [████████░░] 75%
 
 *Updated after each plan completion*
 | Phase 01 P01 | 10min | 2 tasks | 10 files |
+| Phase 01 P03 | 5m | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -61,6 +62,7 @@ Recent decisions affecting current work:
 - [Roadmap]: Frontend split in two phases; Phase 5 needs Phase 3 (chat) and Phase 4
 - [Roadmap]: Done = E2E green in Docker with LLM_MOCK=true; PowerShell scripts must work
 - [Phase 01-01]: PriceCache auto timestamps strictly increasing per ticker (Windows clock resolution)
+- [Phase 01]: litellm pinned >=1.105,<1.106; project stays virtual (no build-system) — supply-chain baseline
 
 ### Pending Todos
 
