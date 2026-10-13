@@ -220,3 +220,10 @@ next-env.d.ts
 # Playwright
 test/playwright-report/
 test/test-results/
+
+# FinAlly runtime data and build output
+db/*.db
+db/*.db-journal
+db/*.db-wal
+db/*.db-shm
+backend/static/
