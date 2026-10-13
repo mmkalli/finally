@@ -10,7 +10,7 @@
 ### Foundation (repair & baseline)
 
 - [x] **FOUND-01**: All merge-conflict markers are resolved in `backend/app/market/` (per CONCERNS.md guidance) and `import app.market` succeeds
-- [ ] **FOUND-02**: Backend dependencies (litellm, pydantic, python-dotenv, tzdata) are declared via uv and `uv.lock` is regenerated; `uv sync` succeeds
+- [x] **FOUND-02**: Backend dependencies (litellm, pydantic, python-dotenv, tzdata) are declared via uv and `uv.lock` is regenerated; `uv sync` succeeds
 - [x] **FOUND-03**: The existing market-data test suite passes (`uv run pytest`)
 - [ ] **FOUND-04**: A guard test/CI check fails if any `^<<<<<<<` / `^>>>>>>>` conflict marker exists in the repo
 - [x] **FOUND-05**: Stale `__pycache__` dirs for `api/`, `chat/`, `database/`, `portfolio/` are removed
@@ -159,7 +159,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | FOUND-01 | Phase 1 | Complete |
-| FOUND-02 | Phase 1 | Pending |
+| FOUND-02 | Phase 1 | Complete |
 | FOUND-03 | Phase 1 | Complete |
 | FOUND-04 | Phase 1 | Pending |
 | FOUND-05 | Phase 1 | Complete |

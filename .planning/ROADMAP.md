@@ -39,7 +39,7 @@ Plans:
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
-- [ ] 01-03-PLAN.md — Package legitimacy checkpoint, uv add litellm/pydantic/python-dotenv, regenerate uv.lock, baseline test (wave 2)
+- [x] 01-03-PLAN.md — Package legitimacy checkpoint, uv add litellm/pydantic/python-dotenv, regenerate uv.lock, baseline test (wave 2)
 
 **Wave 3** *(blocked on Wave 2 completion)*
 
@@ -142,7 +142,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Repair & Baseline | 2/4 | In Progress|  |
+| 1. Repair & Baseline | 3/4 | In Progress|  |
 | 2. Backend Core | 0/TBD | Not started | - |
 | 3. LLM Chat | 0/TBD | Not started | - |
 | 4. Frontend Market | 0/TBD | Not started | - |
