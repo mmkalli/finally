@@ -158,12 +158,91 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (filled by roadmapper) | | |
+| FOUND-01 | Phase 1 | Pending |
+| FOUND-02 | Phase 1 | Pending |
+| FOUND-03 | Phase 1 | Pending |
+| FOUND-04 | Phase 1 | Pending |
+| FOUND-05 | Phase 1 | Pending |
+| FOUND-06 | Phase 1 | Pending |
+| SHELL-01 | Phase 2 | Pending |
+| SHELL-02 | Phase 2 | Pending |
+| SHELL-03 | Phase 2 | Pending |
+| SHELL-04 | Phase 2 | Pending |
+| SHELL-05 | Phase 2 | Pending |
+| SHELL-06 | Phase 2 | Pending |
+| DATA-01 | Phase 2 | Pending |
+| DATA-02 | Phase 2 | Pending |
+| DATA-03 | Phase 2 | Pending |
+| DATA-04 | Phase 2 | Pending |
+| TRADE-01 | Phase 2 | Pending |
+| TRADE-02 | Phase 2 | Pending |
+| TRADE-03 | Phase 2 | Pending |
+| TRADE-04 | Phase 2 | Pending |
+| TRADE-05 | Phase 2 | Pending |
+| TRADE-06 | Phase 2 | Pending |
+| TRADE-07 | Phase 2 | Pending |
+| API-01 | Phase 2 | Pending |
+| API-02 | Phase 2 | Pending |
+| API-03 | Phase 2 | Pending |
+| API-04 | Phase 2 | Pending |
+| API-05 | Phase 2 | Pending |
+| API-06 | Phase 2 | Pending |
+| API-07 | Phase 2 | Pending |
+| API-08 | Phase 3 | Pending |
+| CHAT-01 | Phase 3 | Pending |
+| CHAT-02 | Phase 3 | Pending |
+| CHAT-03 | Phase 3 | Pending |
+| CHAT-04 | Phase 3 | Pending |
+| CHAT-05 | Phase 3 | Pending |
+| CHAT-06 | Phase 3 | Pending |
+| CHAT-07 | Phase 3 | Pending |
+| CHAT-08 | Phase 3 | Pending |
+| CHAT-09 | Phase 3 | Pending |
+| UI-01 | Phase 4 | Pending |
+| UI-02 | Phase 4 | Pending |
+| UI-03 | Phase 4 | Pending |
+| UI-04 | Phase 4 | Pending |
+| UI-05 | Phase 4 | Pending |
+| UI-06 | Phase 4 | Pending |
+| UI-07 | Phase 4 | Pending |
+| UI-08 | Phase 5 | Pending |
+| UI-09 | Phase 5 | Pending |
+| UI-10 | Phase 5 | Pending |
+| UI-11 | Phase 5 | Pending |
+| UI-12 | Phase 5 | Pending |
+| UI-13 | Phase 5 | Pending |
+| UI-14 | Phase 5 | Pending |
+| UI-15 | Phase 5 | Pending |
+| UI-16 | Phase 5 | Pending |
+| UI-17 | Phase 5 | Pending |
+| POLISH-01 | Phase 5 | Pending |
+| POLISH-02 | Phase 5 | Pending |
+| POLISH-03 | Phase 5 | Pending |
+| POLISH-04 | Phase 5 | Pending |
+| FTEST-01 | Phase 5 | Pending |
+| FTEST-02 | Phase 5 | Pending |
+| FTEST-03 | Phase 5 | Pending |
+| DEPLOY-01 | Phase 6 | Pending |
+| DEPLOY-02 | Phase 6 | Pending |
+| DEPLOY-03 | Phase 6 | Pending |
+| DEPLOY-04 | Phase 6 | Pending |
+| DEPLOY-05 | Phase 6 | Pending |
+| DEPLOY-06 | Phase 6 | Pending |
+| E2E-01 | Phase 7 | Pending |
+| E2E-02 | Phase 7 | Pending |
+| E2E-03 | Phase 7 | Pending |
+| E2E-04 | Phase 7 | Pending |
+| E2E-05 | Phase 7 | Pending |
+| E2E-06 | Phase 7 | Pending |
+| E2E-07 | Phase 7 | Pending |
+| E2E-08 | Phase 7 | Pending |
+| E2E-09 | Phase 7 | Pending |
+| E2E-10 | Phase 7 | Pending |
 
 **Coverage:**
 - v1 requirements: 80 total
-- Mapped to phases: 0
-- Unmapped: 80 ⚠️
+- Mapped to phases: 80
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-10-13*
