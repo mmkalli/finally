@@ -6,7 +6,7 @@ Brownfield start: only the market-data slice exists and it is broken by merge-co
 
 ## Phases
 
-- [ ] **Phase 1: Repair & Baseline** - Resolve merge conflicts, fix deps and lockfile, get market tests green, add guards (hard gate)
+- [x] **Phase 1: Repair & Baseline** - Resolve merge conflicts, fix deps and lockfile, get market tests green, add guards (hard gate) (completed 2026-10-13)
 - [ ] **Phase 2: Backend Core** - App shell, SQLite, trading engine, portfolio/watchlist/reset REST API with uniform errors
 - [ ] **Phase 3: LLM Chat** - Mock-first chat endpoint, tolerant structured-output parsing, auto-executed actions, history
 - [ ] **Phase 4: Frontend Market** - Next.js shell, SSE price store, header, watchlist with flash and sparklines, main chart
@@ -43,7 +43,7 @@ Plans:
 
 **Wave 3** *(blocked on Wave 2 completion)*
 
-- [ ] 01-04-PLAN.md — Conflict-marker pytest guard + GitHub Actions CI, phase gate (wave 3)
+- [x] 01-04-PLAN.md — Conflict-marker pytest guard + GitHub Actions CI, phase gate (wave 3)
 
 ### Phase 2: Backend Core
 
@@ -142,7 +142,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Repair & Baseline | 3/4 | In Progress|  |
+| 1. Repair & Baseline | 4/4 | Complete   | 2026-10-13 |
 | 2. Backend Core | 0/TBD | Not started | - |
 | 3. LLM Chat | 0/TBD | Not started | - |
 | 4. Frontend Market | 0/TBD | Not started | - |
